@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp_oatmeal"
+             x:Class="MauiApp_oatmeal.MainPage">
+
+    <Shell.TitleView>
+        <Grid BackgroundColor="Purple" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="return.png" HeightRequest="24" WidthRequest="24" VerticalOptions="Center" />
+            <Label Text="Oatmeal with Berries and Seeds"
+                   TextColor="White"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"
+                   Grid.Column="1" />
+        </Grid>
+    </Shell.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <!-- Your other controls (SfRadialGauge and SfRotator) will go here -->
+
+            <!-- Ingredients and Preparation section -->
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Ingredients: " FontAttributes="Bold" />
+                        <Span Text="Gluten-free oats, blueberries, chia seeds, almond milk (if no nut allergy to almonds, otherwise use oat milk), honey." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Preparation: " FontAttributes="Bold" />
+                        <Span Text="Cook the oats in almond or oat milk. Top with fresh blueberries, chia seeds, and a drizzle of honey." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Image Source="oatmeal.png"
+                   HeightRequest="185"
+                   WidthRequest="500"
+                   Aspect="AspectFit"
+                   SemanticProperties.Description="dot net bot in a race car number eight" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
